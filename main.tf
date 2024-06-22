@@ -32,7 +32,7 @@ resource "time_sleep" "wait_for_iam" {
 }
 
 resource "yandex_kubernetes_cluster" "kube_cluster" {
-  name                     = "${var.cluster_name}-${random_string.unique_id.result}"
+  name                     = "${var.cluster_name}"
   description              = var.description
   folder_id                = local.folder_id
   network_id               = var.network_id
